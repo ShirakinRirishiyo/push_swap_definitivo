@@ -47,7 +47,6 @@ void	sort_3(t_stack_node **a)
 	else if (mid > top && mid > bottom)
 	{
 		rev_rotate_a(a);
-		write(1, "\n", 1);
 		if ((*a)->value > (*a)->next->value)
 			swap_a(*a);
 	}

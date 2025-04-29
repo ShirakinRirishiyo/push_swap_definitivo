@@ -6,7 +6,7 @@
 /*   By: dediaz-f <dediaz-f@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 11:37:19 by dediaz-f          #+#    #+#             */
-/*   Updated: 2025/03/31 20:59:52 by dediaz-f         ###   ########.fr       */
+/*   Updated: 2025/04/29 14:23:22 by dediaz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	main(int ac, char **av)
 	if (is_sorted(a))
 		return (free_stack(a), free_stack(b), free(a), free(b), 0);
 	size = ft_lstsize(*a);
-	if (size <= 4)
+	if (size <= 5)
 		sort_short(a, b);
 	else
 		radix_sort(a, b);

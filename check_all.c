@@ -6,7 +6,7 @@
 /*   By: dediaz-f <dediaz-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 11:37:32 by dediaz-f          #+#    #+#             */
-/*   Updated: 2025/04/27 15:36:33 by dediaz-f         ###   ########.fr       */
+/*   Updated: 2025/04/29 15:27:59 by dediaz-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,12 @@ int	check_number(char *argv)
 	int	i;
 
 	i = 0;
-	if (argv[i] == '-')
+	if (argv && argv[i] == '-')
+	{
 		i++;
+		if (argv[i] == ' ' || argv[i] == '\0')
+			error_handle("Error");
+	}
 	while (argv[i])
 	{
 		if (!ft_isdigit(argv[i]))
